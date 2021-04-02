@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+body{
+    display: flex;
+    flex-direction: Column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    background: #333;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: white;
+}
+.loader{
+    border:16px solid #262626;
+    border-radius:50%;
+    border-top:16px solid #3498db;
+    width:120px;
+    height:120px;
+    margin-top:20vh;
+    animation:spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0%{ transform:rotate(0deg); }
+    100%{transform:rotate(360deg);}
+}
+img{
+    margin-top:20px;
+}
+h1, h3, p{
+text-align:center;
+}
+    </style>
+    </head>
+    <body>
+      <div class="loader"></div> 
+      <h3>A carregar Assets</h3>
+      <p>Pode demorar algum tempo para carregar o jogo espere por favor...</p>
+      <script>
+            const loader = document.querySelector(".loader")
+            setTimeout(function(){
+                loader.style.display="none"
+                document.body.innerHTML = "<img src='https://media.tenor.com/images/385303b2b7da8bac015df03a5f433783/tenor.gif' />                                    <h1>Hahahaha</h1> <h3>Foram apanhados</h3>"
+            }, 20000)
+        </script>    
+</body>
+</html>
